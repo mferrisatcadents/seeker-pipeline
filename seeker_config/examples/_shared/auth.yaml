@@ -1,0 +1,10 @@
+# Shared auth sub-config. Referenced via !include from vendor top-level
+# configs. Contains credential *references* (env var names), never raw
+# secrets — the loader returns these strings as-is; resolving them to real
+# credentials happens at collector runtime, not at config-load time.
+type: oauth2
+token_url_env: SEEKER_OAUTH_TOKEN_URL
+client_id_env: SEEKER_OAUTH_CLIENT_ID
+client_secret_env: SEEKER_OAUTH_CLIENT_SECRET
+scopes:
+  - advisories:read

@@ -1,0 +1,10 @@
+# Canonical lifecycle phase set (Appendix B). Shared across all vendors so
+# the ordering rule (PHASE_EOS <= PHASE_EOSM <= PHASE_EOVS <= PHASE_EOSUP <=
+# PHASE_EOL) is defined once and referenced everywhere, rather than
+# copy-pasted per vendor.
+canonical_phases:
+  - PHASE_EOS
+  - PHASE_EOSM
+  - PHASE_EOVS
+  - PHASE_EOSUP
+  - PHASE_EOL

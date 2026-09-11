@@ -1,0 +1,11 @@
+vendor: juniper
+
+auth: !include _shared/auth.yaml
+phases: !include _shared/phases.yaml
+
+sources:
+  - name: juniper_sirt_portal
+    type: portal
+    ingestion_phase: "2D"
+    confidence_tier: 2
+    url: https://supportportal.juniper.net/s/security-advisories

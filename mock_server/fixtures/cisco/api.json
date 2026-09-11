@@ -1,0 +1,12 @@
+{
+  "advisories": [
+    {
+      "advisoryId": "cisco-sa-20260901-example",
+      "advisoryTitle": "Example Cisco Advisory Fixture",
+      "cves": ["CVE-2026-00001"],
+      "sir": "High",
+      "publicationUrl": "https://sec.cloudapps.cisco.com/security/center/content/example",
+      "firstPublished": "2026-09-01T00:00:00Z"
+    }
+  ]
+}

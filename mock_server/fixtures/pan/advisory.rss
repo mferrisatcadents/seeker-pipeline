@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>PAN-OS Security Advisories (fixture)</title>
+    <item>
+      <title>PAN-SA-2026-0001 Example Advisory</title>
+      <link>https://security.paloaltonetworks.com/PAN-SA-2026-0001</link>
+      <pubDate>Tue, 01 Sep 2026 00:00:00 GMT</pubDate>
+    </item>
+  </channel>
+</rss>

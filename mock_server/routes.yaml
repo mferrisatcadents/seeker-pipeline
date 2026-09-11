@@ -1,0 +1,21 @@
+routes:
+  - vendor: cisco
+    path: /cisco/openvuln/advisories
+    fixture: cisco/api.json
+    delay_ms: 0
+
+  - vendor: nvd
+    path: /nvd/cve
+    fixture: nvd/cve.json
+    delay_ms: 0
+
+  - vendor: pan
+    path: /pan/advisory.rss
+    fixture: pan/advisory.rss
+    content_type: application/rss+xml
+    delay_ms: 0
+
+  - vendor: cisco
+    path: /cisco/eox/slow
+    fixture: cisco/api.json
+    delay_ms: 800   # demonstrates AC-04 — simulated latency

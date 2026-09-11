@@ -1,0 +1,23 @@
+vendor: cisco
+
+auth: !include _shared/auth.yaml
+phases: !include _shared/phases.yaml
+
+sources:
+  - name: cisco_openvuln_api
+    type: api
+    ingestion_phase: "2A"
+    confidence_tier: 1
+    url: https://api.cisco.com/security/advisories/v2
+
+  - name: cisco_eox_scraper
+    type: html
+    ingestion_phase: "2C"
+    confidence_tier: 2
+    url: https://www.cisco.com/c/en/us/support/eos-eol-notice-listing.html
+
+  - name: cisco_field_notices
+    type: specialized
+    ingestion_phase: "4"
+    confidence_tier: 2
+    url: https://www.cisco.com/c/en/us/support/field-notices.html

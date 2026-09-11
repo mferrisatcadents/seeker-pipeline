@@ -1,0 +1,49 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Seeker Vendor Config",
+  "description": "Shape required of a fully-resolved (post !include) vendor YAML config.",
+  "type": "object",
+  "required": ["vendor", "sources"],
+  "properties": {
+    "vendor": {
+      "type": "string",
+      "minLength": 1
+    },
+    "auth": {
+      "type": "object"
+    },
+    "phases": {
+      "type": "object"
+    },
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["name", "type", "ingestion_phase", "confidence_tier"],
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "type": {
+            "type": "string",
+            "enum": ["api", "rss", "html", "portal", "csaf", "specialized"]
+          },
+          "ingestion_phase": {
+            "type": "string",
+            "enum": ["1", "2A", "2B", "2C", "2D", "3", "4"]
+          },
+          "confidence_tier": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 4
+          },
+          "url": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
